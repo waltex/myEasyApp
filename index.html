@@ -60,12 +60,12 @@
         });
         </script>
 
-        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cut'">Cut</a>
+        <a href="#" class="easyui-linkbutton drag" data-options="iconCls:'icon-cut'">Cut</a>
 
         <label class="left item">aaa</label>
         <table class="left">
             <tr>
-                <td class="item">
+                <td class="drag">
                     prova drop
                 </td>
             </tr>
@@ -78,7 +78,7 @@
         </div>
 
         <div style="width:700px;">
-            <div class="left">
+            <div>
                 <table>
                     <tr>
                         <td><div class="item">English</div></td>
@@ -188,6 +188,10 @@
             </div>
         </div>
         <style type="text/css">
+            .drag{
+                width:120px;
+                float:left;
+            }
             .left{
                 width:120px;
                 float:left;
@@ -239,12 +243,12 @@
         </style>
         <script>
             $(function(){
-                $('.left .item').draggable({
+                $('.drag').draggable({
                     revert:true,
                     proxy:'clone'
                 });
-                $('.right td.drop').droppable({
-                    accept: '.item',
+                $('.drop').droppable({
+                    //accept: '.item',
                     onDragEnter:function(){
                         $(this).addClass('over');
                     },
@@ -264,18 +268,7 @@
                         }
                     }
                 });
-                $('.left').droppable({
-                    accept:'.assigned',
-                    onDragEnter:function(e,source){
-                        $(source).addClass('trash');
-                    },
-                    onDragLeave:function(e,source){
-                        $(source).removeClass('trash');
-                    },
-                    onDrop: function (e, source) {
-                        $(source).remove();
-                    }
-                });
+     
             });
         </script>
 
