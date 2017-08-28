@@ -1,0 +1,21 @@
+{
+  "name": "myEasyApp",
+  "version": "1.0.0",
+  "description": "A ide for web application with rad tool",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/waltex/myEasyApp.git",
+  "keywords": [
+    "Electron",
+    "ide",
+    "wysiwyg",
+    "jquery"
+  ],
+  "author": "Walter Cardelli",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "~1.6.2"
+  }
+}
